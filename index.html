@@ -1,105 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Проверочный тест</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Получить подарок</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container" role="main">
-    <h1 id="title">Для продолжения, пройдите простой тест, ответив на несколько вопросов</h1>
-    <p class="subtitle">Это нужно для того, чтобы проверить, являетесь ли Вы тем человеком, для кого предназначен этот подарок</p>
 
-    <form id="form" autocomplete="off" aria-labelledby="title">
-      <label for="name">Введите Ваше имя</label>
-      <input type="text" id="name" autocomplete="off" required>
+<div class="container" id="login">
+    <h2>Введите пароль</h2>
+    <input type="password" id="password" placeholder="Пароль">
+    <button onclick="checkPassword()">Войти</button>
+    <p id="error" class="error"></p>
+</div>
 
-      <label for="birth">Введите Вашу дату рождения</label>
-      <input type="text" id="birth" autocomplete="off" required>
+<div class="container hidden" id="content">
+    <h2>Выберите подарок</h2>
 
-      <label for="freddy">Кому принадлежит имя Фредди Фазбер?</label>
-      <input type="text" id="freddy" autocomplete="off" required>
+    <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">
+        Получить подарок №1
+    </a>
 
-      <label for="favq">Введите Ваш любимый вопрос</label>
-      <input type="text" id="favq" autocomplete="off" required>
+    <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">
+        Получить подарок №2
+    </a>
 
-      <!-- НОВЫЕ ВОПРОСЫ -->
-      <label for="eyes">Какая твоя внешняя особенность сильнее всего впечатляет меня?</label>
-      <input type="text" id="eyes" autocomplete="off" required>
+    <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">
+        Получить подарок №3
+    </a>
 
-      <label for="food">Твоя любимая еда, которую ты готова есть каждый день?</label>
-      <input type="text" id="food" autocomplete="off" required>
+    <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">
+        Получить подарок №4
+    </a>
 
-      <label for="math">1 + 1</label>
-      <input type="text" id="math" autocomplete="off" required inputmode="numeric">
+    <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">
+        Получить подарок №5
+    </a>
+</div>
 
-      <button type="submit">Проверить</button>
-      <p id="error" class="error" aria-live="polite"></p>
-    </form>
+<script>
+    function checkPassword() {
+        const input = document.getElementById('password').value;
+        const error = document.getElementById('error');
 
-    <!-- Проверка / успешный блоки -->
-    <div id="checking" class="message checking" aria-hidden="true">
-      Подождите, наши эксперты проверяют ответы<span class="dots"></span>
-    </div>
-
-    <div id="success" class="message success" aria-hidden="true">
-      Успешно! Подарок твой! Ловииииии!
-    </div>
-  </div>
-
-  <!-- Обфусцированный скрипт (не отображает ответы в читабельном виде) -->
-  <script>
-  (function(){
-    const _0x3a1d=["value","trim","toLowerCase","includes","style","display","querySelector","none","block","textContent","Один или несколько ответов неверны","location","href","https://goldapple.ru/giftcardlp?barcode=19000238139&cardid=EBC964C2C729C84DC3B1F3574D1B736BBDE51DB9&pan=7760003079947678770"];
-    document.getElementById("form").addEventListener("submit",function(_0x5f3e){
-        _0x5f3e.preventDefault();
-        let a=document.getElementById("name")[_0x3a1d[0]][_0x3a1d[1]]()[_0x3a1d[2]](),
-            b=document.getElementById("birth")[_0x3a1d[0]][_0x3a1d[1]](),
-            c=document.getElementById("freddy")[_0x3a1d[0]][_0x3a1d[1]]()[_0x3a1d[2]](),
-            d=document.getElementById("favq")[_0x3a1d[0]][_0x3a1d[1]]()[_0x3a1d[2]](),
-            efood=document.getElementById("food")[_0x3a1d[0]][_0x3a1d[1]]()[_0x3a1d[2]](),
-            eyes=document.getElementById("eyes")[_0x3a1d[0]][_0x3a1d[1]]()[_0x3a1d[2]](),
-            f=document.getElementById("math")[_0x3a1d[0]][_0x3a1d[1]]();
-        let nm=["екатерина","катя"],
-            bd=["16012005","16.01.2005"],
-            fr=["медведю","мишке","медведь"],
-            fv=["как дела","как дела?"],
-            ey=["глаза"],
-            fd=["роллы","суши"];
-        if(
-            nm[_0x3a1d[3]](a) &&
-            bd[_0x3a1d[3]](b) &&
-            fr[_0x3a1d[3]](c) &&
-            fv[_0x3a1d[3]](d) &&
-            ey[_0x3a1d[3]](eyes) &&
-            fd[_0x3a1d[3]](efood) &&
-            f==="2"
-        ){
-            document.getElementById("form")[_0x3a1d[4]][_0x3a1d[5]]=_0x3a1d[7];
-            document.querySelector("h1")[_0x3a1d[4]][_0x3a1d[5]]=_0x3a1d[7];
-            document.querySelector(".subtitle")[_0x3a1d[4]][_0x3a1d[5]]=_0x3a1d[7];
-            let check=document.getElementById("checking");
-            check[_0x3a1d[4]][_0x3a1d[5]]=_0x3a1d[8];
-            // первая задержка 5s
-            setTimeout(function(){
-                check[_0x3a1d[4]][_0x3a1d[5]]=_0x3a1d[7];
-                let ok=document.getElementById("success");
-                ok[_0x3a1d[4]][_0x3a1d[5]]=_0x3a1d[8];
-
-// вторая задержка 3s (3000 ms)
-                setTimeout(function(){
-                    window[_0x3a1d[11]][_0x3a1d[12]]=_0x3a1d[13];
-                },3000);
-            },5000);
+        if (input === "2589") {
+            document.getElementById('login').classList.add('hidden');
+            document.getElementById('content').classList.remove('hidden');
         } else {
-            document.getElementById("error")[_0x3a1d[9]]=_0x3a1d[10];
+            error.textContent = "Неверный пароль";
         }
-    });
-  })();
-  </script>
+    }
+</script>
+
 </body>
 </html>
-
-
-
