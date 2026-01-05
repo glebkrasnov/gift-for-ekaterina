@@ -48,7 +48,7 @@ input, button {
     display: block;
     margin: 10px 0;
     padding: 14px;
-    background: #4CAF50;
+    background: #18171C;
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -115,3 +115,4 @@ input, button {
         padding: 12px;
     }
 }
+
