@@ -10,7 +10,7 @@
 
 <div class="page">
 
-    <!-- Вход -->
+    <!-- ВХОД -->
     <div class="container" id="login">
         <h2>Введите пароль</h2>
         <input type="password" id="password" placeholder="Пароль">
@@ -18,17 +18,13 @@
         <p id="error" class="error"></p>
     </div>
 
-    <!-- Главное меню -->
+    <!-- ГЛАВНОЕ МЕНЮ -->
     <div class="container hidden" id="content">
         <h2>Открывай скорей!</h2>
 
-        <button class="gift-btn" onclick="openCongrats()">
-            💌 Поздравление
-        </button>
+        <button class="gift-btn" onclick="openCongrats()">💌 Поздравление</button>
 
-        <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">
-            Получить подарок №1
-        </a>
+        <button class="gift-btn" onclick="openGift1()">Получить подарок №1</button>
 
         <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">
             Получить подарок №2
@@ -47,7 +43,7 @@
         </a>
     </div>
 
-    <!-- Поздравление -->
+    <!-- ПОЗДРАВЛЕНИЕ -->
     <div class="container hidden" id="congrats">
         <h2>💖 Поздравление</h2>
 
@@ -56,21 +52,32 @@
                 Дорогая Екатерина!<br><br>
 
                 Сегодня тебе исполнилось 21. Пусть этот день наполнится теплом улыбок,
-                радостью встреч и светлыми мгновениями счастья! Желаю тебе крепкого здоровья,
-                чтобы головная боль навсегда исчезла из твоей жизни, и каждый новый день
-                приносил только радость и вдохновение!<br><br>
+                радостью встреч и светлыми мгновениями счастья. Желаю тебе крепкого здоровья,
+                чтоб головная боль навсегда исчезла из твоей жизни, и каждый новый день
+                приносил только радость и вдохновение.<br><br>
 
-                Ты особенная для меня, потому что твоя доброта и нежность согревают моё сердце!
+                Ты особенная для меня, потому что твоя доброта и нежность согревают сердце.
                 Спасибо за твоё присутствие рядом, твои искренние чувства и заботу.
-                Я искренне ценю тебя и дорожу каждым моментом вместе!<br><br>
+                Я искренне ценю тебя и дорожу каждым моментом вместе.<br><br>
 
                 Любимая Катенька, знай, что я всегда буду рядом, поддерживая и оберегая тебя.
-                Ты моя единственная и неповторимая, и я бесконечно счастлив, что мы вместе!<br><br>
+                Ты моя единственная и неповторимая, и я бесконечно счастлив, что мы вместе.<br><br>
 
                 Всегда твой, Глеб<br><br>
 
-                <strong>P.S.: Люблю тебя безумно!❤</strong>
+                <strong>P.S.: Люблю тебя безумно!</strong>
             </p>
+        </div>
+
+        <button onclick="backToMenu()">⬅ Назад</button>
+    </div>
+
+    <!-- ПОДАРОК №1 -->
+    <div class="container hidden" id="gift1">
+        <h2>🎁 Ваш подарок</h2>
+
+        <div class="congrats-box" style="text-align:center;">
+            <strong>Подписка Telegram Premium<br>на 1 месяц</strong>
         </div>
 
         <button onclick="backToMenu()">⬅ Назад</button>
@@ -97,12 +104,17 @@
         document.getElementById('congrats').classList.remove('hidden');
     }
 
+    function openGift1() {
+        document.getElementById('content').classList.add('hidden');
+        document.getElementById('gift1').classList.remove('hidden');
+    }
+
     function backToMenu() {
         document.getElementById('congrats').classList.add('hidden');
+        document.getElementById('gift1').classList.add('hidden');
         document.getElementById('content').classList.remove('hidden');
     }
 </script>
 
 </body>
 </html>
-
