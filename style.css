@@ -14,7 +14,7 @@ body {
     align-items: center;
 }
 
-/* Контейнер — ВЕРТИКАЛЬНЫЙ ПОТОК */
+/* Контейнер */
 .container {
     width: 100%;
     max-width: 380px;
@@ -23,53 +23,84 @@ body {
     border-radius: 12px;
 
     display: flex;
-    flex-direction: column;   /* 🔑 КЛЮЧЕВОЕ */
-    gap: 10px;                /* 🔑 РОВНЫЕ ОТСТУПЫ */
+    flex-direction: column;
+    gap: 10px;
 
     box-sizing: border-box;
 }
 
-/* Заголовки */
+/* Заголовок */
 h2 {
     margin: 0 0 10px 0;
     text-align: center;
+    animation: fadeDown 0.5s ease;
 }
 
 /* Поле пароля */
 input {
-    font-size: 16px;          /* ❌ убирает авто-зум */
+    font-size: 16px;
     padding: 12px;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* ВСЕ кнопки */
+/* ВСЕ кнопки ОДИНАКОВЫЕ */
 button,
 .gift-btn {
+    display: block;                 /* 🔑 */
     width: 100%;
     padding: 14px;
     font-size: 16px;
-    border-radius: 8px;
 
+    border-radius: 8px;
     border: none;
     cursor: pointer;
 
     background: #18171C;
     color: #fff;
     text-decoration: none;
+    text-align: center;             /* 🔑 */
 
     box-sizing: border-box;
+
+    /* АНИМАЦИЯ */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.5s ease forwards;
+}
+
+/* Задержки (сверху вниз) */
+.container button:nth-of-type(1),
+.container .gift-btn:nth-of-type(1) { animation-delay: 0.05s; }
+
+.container button:nth-of-type(2),
+.container .gift-btn:nth-of-type(2) { animation-delay: 0.15s; }
+
+.container button:nth-of-type(3),
+.container .gift-btn:nth-of-type(3) { animation-delay: 0.25s; }
+
+.container button:nth-of-type(4),
+.container .gift-btn:nth-of-type(4) { animation-delay: 0.35s; }
+
+.container button:nth-of-type(5),
+.container .gift-btn:nth-of-type(5) { animation-delay: 0.45s; }
+
+.container button:nth-of-type(6),
+.container .gift-btn:nth-of-type(6) { animation-delay: 0.55s; }
+
+/* Hover */
+button:hover,
+.gift-btn:hover {
+    background: #A5A5A5;
 }
 
 /* Рамка с прокруткой */
 .congrats-box {
     max-height: 50vh;
     overflow-y: auto;
-
     padding: 14px;
     border: 2px solid #18171C;
     border-radius: 10px;
-
     font-size: 15px;
     line-height: 1.5;
     text-align: left;
@@ -92,7 +123,26 @@ button,
     display: none;
 }
 
-/* 📱 МОБИЛЬНАЯ АДАПТАЦИЯ */
+/* Анимации */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 📱 Мобильные */
 @media (max-width: 480px) {
     .container {
         max-width: 95%;
@@ -101,6 +151,5 @@ button,
 
     .congrats-box {
         max-height: 55vh;
-        font-size: 15px;
     }
 }
