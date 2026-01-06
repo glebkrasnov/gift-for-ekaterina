@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <title>Подарки</title>
+
+    <!-- ИКОНКА ДЛЯ iPHONE -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- ЧТОБЫ ОТКРЫВАЛОСЬ КАК ПРИЛОЖЕНИЕ -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ТВОИ СТИЛИ -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -92,7 +102,7 @@
 
             const content = document.getElementById('content');
             content.classList.remove('hidden');
-            void content.offsetWidth; // перезапуск анимации
+            void content.offsetWidth;
             error.textContent = "";
         } else {
             error.textContent = "Неверный пароль";
@@ -122,6 +132,3 @@
 
 </body>
 </html>
-
-
-
