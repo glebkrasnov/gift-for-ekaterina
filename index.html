@@ -78,37 +78,22 @@
 </div>
 
 <script>
-    function checkPassword() {
-        const input = document.getElementById('password').value;
-        const error = document.getElementById('error');
+function backToMenu() {
+    document.getElementById('congrats').classList.add('hidden');
+    document.getElementById('gift1').classList.add('hidden');
 
-        if (input === "2589") {
-            document.getElementById('login').classList.add('hidden');
-            document.getElementById('content').classList.remove('hidden');
-            error.textContent = "";
-        } else {
-            error.textContent = "Неверный пароль";
-        }
-    }
+    const content = document.getElementById('content');
+    content.classList.add('hidden');
 
-    function openCongrats() {
-        document.getElementById('content').classList.add('hidden');
-        document.getElementById('congrats').classList.remove('hidden');
-    }
+    /* Перезапуск анимации */
+    void content.offsetWidth;
 
-    function openGift1() {
-        document.getElementById('content').classList.add('hidden');
-        document.getElementById('gift1').classList.remove('hidden');
-    }
-
-    function backToMenu() {
-        document.getElementById('congrats').classList.add('hidden');
-        document.getElementById('gift1').classList.add('hidden');
-        document.getElementById('content').classList.remove('hidden');
-    }
+    content.classList.remove('hidden');
+}
 </script>
 
 </body>
 </html>
+
 
 
