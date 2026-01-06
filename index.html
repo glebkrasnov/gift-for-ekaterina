@@ -2,7 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ВАЖНО: корректная мобильная адаптация -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
     <title>Подарки</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,24 +26,12 @@
         <h2>Открывай скорей!</h2>
 
         <button class="gift-btn" onclick="openCongrats()">💌 Поздравление</button>
-
         <button class="gift-btn" onclick="openGift1()">Получить подарок №1</button>
 
-        <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">
-            Получить подарок №2
-        </a>
-
-        <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">
-            Получить подарок №3
-        </a>
-
-        <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">
-            Получить подарок №4
-        </a>
-
-        <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">
-            Получить подарок №5
-        </a>
+        <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">Получить подарок №2</a>
+        <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">Получить подарок №3</a>
+        <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">Получить подарок №4</a>
+        <a href="https://yandex.ru/pogoda/ru?lon=43.8074&lat=56.2086&ll=43.8074_56.2086&z=9" class="gift-btn">Получить подарок №5</a>
     </div>
 
     <!-- ПОЗДРАВЛЕНИЕ -->
@@ -64,7 +55,6 @@
                 Ты моя единственная и неповторимая, и я бесконечно счастлив, что мы вместе.<br><br>
 
                 Всегда твой, Глеб<br><br>
-
                 <strong>P.S.: Люблю тебя безумно!</strong>
             </p>
         </div>
@@ -76,7 +66,7 @@
     <div class="container hidden" id="gift1">
         <h2>🎁 Ваш подарок</h2>
 
-        <div class="congrats-box" style="text-align:center;">
+        <div class="congrats-box center-text">
             <strong>Подписка Telegram Premium<br>на 1 месяц</strong>
         </div>
 
