@@ -84,15 +84,22 @@ body {
 /* Подписи */
 .caption {
     margin: 10px 0 20px;
-    font-size: 20px;
 }
 
-/* Стиль 1 (светло-коричневый, курсив) */
+/* Стиль 1 (светло-коричневый, почти печатный, больше размер, оформление) */
 .style1 {
     color: #c9a26a;
-    font-family: "Monotype Corsiva", cursive;
+    font-family: Georgia, "Times New Roman", serif;
     font-style: italic;
-    font-size: 16px;
+    font-size: 20px;
+
+    /* оформление блока */
+    background: #fff8e7;      /* кремовый фон */
+    border: 1px solid #c9a26a; /* тонкая рамка светло-коричневая */
+    border-radius: 10px;       /* скругление углов */
+    padding: 8px 12px;         /* внутренние отступы */
+    display: inline-block;      /* чтобы фон обтекал текст */
+    text-align: center;         /* центрирование текста внутри блока */
 }
 
 /* Ряд: текст слева, фото справа */
