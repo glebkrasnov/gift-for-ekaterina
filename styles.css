@@ -1,45 +1,80 @@
-/* Жесткий сброс */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Страница */
 body {
-    background-color: #f6f6f6;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
+    background: #f6f6f6;
 }
 
-/* Главный контейнер */
-.page {
-    max-width: 420px;          /* ЖЕСТКАЯ ширина для телефона */
-    margin: 0 auto;            /* Центр по горизонтали */
-    padding: 20px 16px;
-    text-align: center;        /* ВСЁ по центру */
+.wrapper {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Заголовок */
-.title {
+h1 {
     font-style: italic;
     font-size: 26px;
     margin-bottom: 12px;
 }
 
-/* Подзаголовок */
-.subtitle {
+h2 {
     font-size: 16px;
+    font-weight: normal;
     line-height: 1.4;
     margin-bottom: 16px;
-    font-weight: normal;
 }
 
-/* ФОТО — ЖЕСТКО ЗАФИКСИРОВАНО */
+.image-wrapper {
+    position: relative;
+    max-width: 360px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/* Фото */
 .photo {
     width: 100%;
-    max-width: 360px;     /* ← ФИКСИРОВАННЫЙ МАКС РАЗМЕР */
     height: auto;
     display: block;
-    margin: 0 auto;       /* Центрирование картинки */
     border-radius: 10px;
+    transition: filter 0.6s ease;
+}
+
+/* Блюр */
+.photo.blurred {
+    filter: blur(18px);
+}
+
+/* Плашка */
+.blur-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 12px;
+
+    transition: opacity 0.4s ease;
+}
+
+/* Скрытие */
+.image-wrapper.revealed .photo {
+    filter: blur(0);
+}
+
+.image-wrapper.revealed .blur-overlay {
+    opacity: 0;
+    pointer-events: none;
 }
