@@ -114,12 +114,21 @@ body {
 }
 
 /* Ряд: текст слева, фото справа */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* перенос только при нехватке места */
+}
+
 .row .text {
     font-size: 16px;
     color: #000;
     max-width: 45%;
-    text-align: center;   /* переносы начинаются из центра колонки */
-    padding: 0 8px;       /* отступы слева и справа */
+    text-align: left; /* текст слева внутри колонки */
+    padding: 0 8px;   /* внутренние отступы, чтобы не прилипал к краю */
 }
 
 /* Видео */
@@ -131,15 +140,13 @@ body {
 /* Адаптация под мобильные экраны */
 @media (max-width: 768px) {
     .row {
-        flex-direction: row;
-        flex-wrap: wrap;
         gap: 10px;
         justify-content: flex-start;
     }
 
     .row .text {
         max-width: 45%;
-        /* text-align: left; <- убрали, теперь сохраняется center */
+        /* text-align оставляем left, padding сохраняем */
     }
 
     .row .image-wrapper {
