@@ -1,4 +1,3 @@
-function revealPhoto() {
-    const wrapper = document.querySelector('.image-wrapper');
+function revealPhoto(wrapper) {
     wrapper.classList.add('revealed');
 }
