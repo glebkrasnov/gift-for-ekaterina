@@ -10,22 +10,38 @@
 <body>
 
 <div class="wrapper">
-    <div class="title-cloud">Как это было...</div>
+    <!-- Заголовок -->
+    <h1 class="title">Как это было...</h1>
 
     <h2 class="subtitle">
         11 класс.<br>
         Репетируем сценку к «Последнему Звонку»
     </h2>
 
-    <div class="image-wrapper" onclick="revealPhoto()">
-        <img src="photo1.png" class="photo blurred" alt="Фото">
-        <div class="blur-overlay">
-            Нажми
+    <!-- Фото 1 с блюром -->
+    <div class="image-wrapper" onclick="revealPhoto(this)">
+        <img src="photo1.png" class="photo blurred" alt="Фото 1">
+        <div class="blur-overlay">Нажми</div>
+    </div>
+
+    <!-- Подпись под фото 1 -->
+    <div class="caption light-brown">
+        Я сижу и даже представить не могу, что меня ждет впереди...
+    </div>
+
+    <!-- Блок с текстом слева и фото справа -->
+    <div class="row">
+        <div class="text">
+            Здесь мы впервые танцуем
+        </div>
+        <div class="image-wrapper" onclick="revealPhoto(this)">
+            <img src="photo2.png" class="photo blurred" alt="Фото 2">
+            <div class="blur-overlay">Нажми</div>
         </div>
     </div>
+
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
