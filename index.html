@@ -1,16 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Redirect</title>
-    <meta http-equiv="refresh" content="0; url=https://yandex.ru/pogoda/ru/blog/kakaya-pogoda-na-marse">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как это было</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div class="page">
+
+  <!-- 1. ЗАГОЛОВОК В ОБЛАКЕ -->
+  <div class="cloud title">
+    КАК ЭТО БЫЛО
+  </div>
+
+  <!-- 2. ПОДЗАГОЛОВОК -->
+  <div class="text normal">
+    11 класс. Репетируем сценку к «Последнему Звонку»
+  </div>
+
+  <!-- 3. PHOTO 1 -->
+  <div class="media blur">
+    <img src="media/photo1.png" alt="">
+    <div class="overlay">Нажми</div>
+  </div>
+
+  <!-- 4. ОБЛАКО -->
+  <div class="cloud">
+    Я сижу и даже представить не могу, что меня ждет впереди…
+  </div>
+
+  <!-- 5. ТЕКСТ СЛЕВА / ФОТО СПРАВА -->
+  <div class="row split">
+    <div class="text normal">
+      Здесь мы впервые танцуем
+    </div>
+
+    <div class="media blur small">
+      <img src="media/photo2.png" alt="">
+      <div class="overlay">Нажми</div>
+    </div>
+  </div>
+
+  <!-- 6. ОБЛАКО -->
+  <div class="cloud">
+    …а я впервые держу за руки своё будущее счастье…
+  </div>
+
+  <!-- 7. ТЕКСТ -->
+  <div class="text normal bold">
+    Выпускной! Здесь мы приблатённые 😎
+  </div>
+
+  <!-- 8. PHOTO 3 -->
+  <div class="media blur">
+    <img src="media/photo3.png" alt="">
+    <div class="overlay">Нажми</div>
+  </div>
+
+  <!-- 9. ОБЛАКО -->
+  <div class="cloud">
+    Помню, как очень стеснялся подойти к тебе сфотографироваться 😅
+  </div>
+
+  <!-- 10. ТЕКСТ СЛЕВА / ФОТО СПРАВА -->
+  <div class="row split">
+    <div class="text small">
+      Выпускной прошел. За ним ещё <span class="circle">9</span> месяцев, а ты всё ещё в моей голове
+    </div>
+
+    <div class="media blur small">
+      <img src="media/photo4.png" alt="">
+      <div class="overlay">Нажми</div>
+    </div>
+  </div>
+
+  <!-- 11. ОБЛАКО -->
+  <div class="cloud">
+    И вот, наконец, настал тот день, когда я обрёл своё счастье!
+  </div>
+
+  <!-- 12. PHOTO 5 -->
+  <div class="media blur">
+    <img src="media/photo5.png" alt="">
+    <div class="overlay">Нажми</div>
+  </div>
+
+  <!-- 13. ТЕКСТ СЛЕВА / ФОТО СПРАВА -->
+  <div class="row split">
+    <div class="text big">
+      Отправил…
+    </div>
+
+    <div class="media blur tiny">
+      <img src="media/photo6.png" alt="">
+      <div class="overlay">Нажми</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.media').forEach(block => {
+  block.addEventListener('click', () => {
+    block.classList.remove('blur');
+  });
+});
+</script>
+
 </body>
 </html>
-
-
-
-
-
-
