@@ -1,0 +1,53 @@
+/* Сброс */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f8f8f8;
+    color: #222;
+}
+
+/* Контейнер */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
+}
+
+/* Заголовок */
+.title {
+    font-style: italic;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Подзаголовок */
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: 16px;
+    color: #444;
+}
+
+/* Изображение */
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Чуть больше экран — чуть крупнее текст */
+@media (min-width: 768px) {
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+}
