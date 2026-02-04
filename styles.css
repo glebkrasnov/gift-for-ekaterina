@@ -20,7 +20,7 @@ body {
 .title {
     font-family: "Monotype Corsiva", cursive;
     font-size: 50px;
-    color: #c9a26a; /* светло-коричневый */
+    color: #c9a26a;
     margin-bottom: 12px;
 }
 
@@ -44,6 +44,10 @@ body {
     max-width: 100%;
     height: auto;
     transition: filter 0.6s ease;
+
+    /* GPU ускорение для плавного снятия блюра */
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 /* Блюр по умолчанию для всех фото */
@@ -51,6 +55,9 @@ body {
     position: relative;
     margin: 16px auto;
     cursor: pointer;
+
+    overflow: hidden; /* убираем артефакты по краям */
+    border-radius: 10px;
 }
 
 .photo.blurred {
@@ -93,13 +100,12 @@ body {
     font-style: italic;
     font-size: 20px;
 
-    /* оформление блока */
     background: #fff8e7;      /* кремовый фон */
-    border: 1px solid #c9a26a; /* тонкая рамка светло-коричневая */
-    border-radius: 10px;       /* скругление углов */
+    border: 1px solid #c9a26a; /* тонкая рамка */
+    border-radius: 10px;       /* скругленные углы */
     padding: 8px 12px;         /* внутренние отступы */
     display: inline-block;      /* чтобы фон обтекал текст */
-    text-align: center;         /* центрирование текста внутри блока */
+    text-align: center;         /* центрирование текста */
 }
 
 /* Ряд: текст слева, фото справа */
@@ -121,7 +127,7 @@ body {
 /* Адаптация под мобильные экраны */
 @media (max-width: 768px) {
     .row {
-        flex-direction: row; /* оставляем слева/справа */
+        flex-direction: row; 
         flex-wrap: wrap;
         gap: 10px;
         justify-content: flex-start;
