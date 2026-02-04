@@ -37,26 +37,23 @@ body {
     color: #000;
 }
 
-/* Фото */
+/* Фото и видео */
 .photo {
     border-radius: 10px;
     display: block;
     max-width: 100%;
     height: auto;
     transition: filter 0.6s ease;
-
-    /* GPU ускорение для плавного снятия блюра */
     backface-visibility: hidden;
     transform: translateZ(0);
 }
 
-/* Блюр по умолчанию для всех фото */
+/* Блюр по умолчанию для всех фото и видео */
 .image-wrapper {
     position: relative;
     margin: 16px auto;
     cursor: pointer;
-
-    overflow: hidden; /* убираем артефакты по краям */
+    overflow: hidden;
     border-radius: 10px;
 }
 
@@ -93,19 +90,27 @@ body {
     margin: 10px 0 20px;
 }
 
-/* Стиль 1 (светло-коричневый, почти печатный, больше размер, оформление) */
+/* Стиль 1 (светло-коричневый, почти печатный, рамка и фон) */
 .style1 {
     color: #c9a26a;
     font-family: Georgia, "Times New Roman", serif;
     font-style: italic;
     font-size: 20px;
+    background: #fff8e7;
+    border: 1px solid #c9a26a;
+    border-radius: 10px;
+    padding: 8px 12px;
+    display: inline-block;
+    text-align: center;
+}
 
-    background: #fff8e7;      /* кремовый фон */
-    border: 1px solid #c9a26a; /* тонкая рамка */
-    border-radius: 10px;       /* скругленные углы */
-    padding: 8px 12px;         /* внутренние отступы */
-    display: inline-block;      /* чтобы фон обтекал текст */
-    text-align: center;         /* центрирование текста */
+/* Выделение цифры 9 */
+.highlight-number {
+    border: 1px solid #c9a26a;
+    border-radius: 50%;
+    padding: 2px 6px;
+    background: #fff8e7;
+    font-weight: bold;
 }
 
 /* Ряд: текст слева, фото справа */
@@ -124,10 +129,16 @@ body {
     text-align: left;
 }
 
+/* Видео */
+.video-wrapper video {
+    width: 100%;
+    border-radius: 10px;
+}
+
 /* Адаптация под мобильные экраны */
 @media (max-width: 768px) {
     .row {
-        flex-direction: row; 
+        flex-direction: row;
         flex-wrap: wrap;
         gap: 10px;
         justify-content: flex-start;
