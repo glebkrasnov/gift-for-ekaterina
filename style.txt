@@ -1,155 +1,140 @@
+/* ==== НАСТРОЙКИ ==== */
+:root {
+  --page-width: 1080px;
+  --side-padding: 50px;
+  --cloud-color: #c8a47e;
+}
+
+/* ==== БАЗА ==== */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-
-    background: url("bg14f.png") no-repeat center center fixed;
-    background-size: cover;
+  margin: 0;
+  background: #f5f5f5; /* ← ЗДЕСЬ ПОТОМ СВОЙ ФОН */
+  font-family: Arial, sans-serif;
 }
 
-/* Центр экрана */
+/* ==== КОНТЕЙНЕР ==== */
 .page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 40px var(--side-padding);
 }
 
-/* Экран входа */
-#login.container {
-    width: 100%;
-    max-width: 360px;
-    padding: 16px;
-    background: rgba(255,255,255,0.95);
-    border-radius: 12px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.center-text {
-    text-align: center;
-}
-
-input {
-    padding: 12px;
-    font-size: 16px;
-}
-
-button,
-.gift-btn {
-    padding: 14px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: none;
-    background: #18171C;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-}
-
-button:hover,
-.gift-btn:hover {
-    background: #A5A5A5;
-}
-
-.error {
-    color: red;
-    text-align: center;
-}
-
-/* Контейнер приветствия */
-.welcome-box {
-    background: rgba(255,255,255,0.85);
-    padding: 20px 26px;
-    border-radius: 16px;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-/* Приветствие */
-.welcome {
-    text-align: center;
-    color: #000;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1.3;
-}
-
-.welcome .name {
-    font-size: 30px;
-}
-
-/* Белый контейнер */
-.content-box {
-    background: rgba(255,255,255,0.95);
-    padding: 22px;
-    border-radius: 16px;
-    text-align: center;
-    max-width: 360px;
-    width: 90%;
-    margin-bottom: 20px;
-}
-
-/* Текст и видео */
-.text,
-#media,
-.gift-btn {
-    opacity: 0;
-}
-
+/* ==== ТЕКСТ ==== */
 .text {
-    margin-top: 10px;
+  margin: 16px 0;
+}
+
+.text.normal {
+  font-size: 12px;
+  color: #000;
+}
+
+.text.bold {
+  font-weight: bold;
 }
 
 .text.small {
-    font-size: 16px;
-    margin-top: 16px;
+  font-size: 10px;
 }
 
-#media {
-    margin-top: 10px;
+.text.big {
+  font-size: 20px;
 }
 
-#media video {
-    width: 100%;
-    border-radius: 12px;
+/* ==== ОБЛАКО ==== */
+.cloud {
+  display: inline-block;
+  background: #fff;
+  border-radius: 30px;
+  padding: 14px 20px;
+  margin: 20px 0;
+  font-family: "Monotype Corsiva", cursive;
+  font-size: 12px;
+  color: var(--cloud-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* Анимации */
-.fade-in {
-    animation: fadeIn 1s forwards;
+.cloud.title {
+  font-size: 22px;
+  text-transform: uppercase;
 }
 
-.fade-out {
-    animation: fadeOut 1s forwards;
+/* ==== МЕДИА ==== */
+.media {
+  position: relative;
+  margin: 24px 0;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-@keyframes fadeIn {
-    to { opacity: 1; }
+.media img,
+.media video {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  filter: blur(12px);
+  transition: filter 0.4s ease;
 }
 
-@keyframes fadeOut {
-    to { opacity: 0; }
+.media.blur img,
+.media.blur video {
+  filter: blur(12px);
 }
 
-.hidden {
-    display: none;
+.media:not(.blur) img,
+.media:not(.blur) video {
+  filter: blur(0);
 }
 
-/* Мобилки */
-@media (max-width: 480px) {
-    .welcome {
-        font-size: 24px;
-    }
+/* ==== РАЗМЕРЫ ==== */
+.media.small { max-width: 500px; }
+.media.tiny { max-width: 400px; }
 
-    .welcome .name {
-        font-size: 28px;
-    }
+/* ==== ЗАГЛУШКА ==== */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
 }
 
+.media:not(.blur) .overlay {
+  display: none;
+}
 
+/* ==== РЯД ==== */
+.row.split {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+
+/* ==== ОБВОДКА ЦИФРЫ ==== */
+.circle {
+  display: inline-block;
+  padding: 2px 6px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  font-size: 9px;
+}
+
+/* ==== МОБИЛКА ==== */
+@media (max-width: 768px) {
+  .page {
+    padding: 30px 20px;
+  }
+
+  .row.split {
+    grid-template-columns: 1fr;
+  }
+}
