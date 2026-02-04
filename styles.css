@@ -105,13 +105,21 @@ body {
 /* Адаптация под мобильные экраны */
 @media (max-width: 768px) {
     .row {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row; /* оставляем слева/справа */
+        flex-wrap: wrap;     /* чтобы не вылезало за экран */
+        gap: 10px;
+        justify-content: flex-start;
     }
 
     .row .text {
-        max-width: 100%;
-        margin-bottom: 10px;
+        max-width: 45%;
+        text-align: left;
+    }
+
+    .row .image-wrapper {
+        max-width: 50%;
     }
 }
+
+
 
