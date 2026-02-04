@@ -16,11 +16,26 @@ body {
     text-align: center;
 }
 
-.title {
-    font-style: italic;
+/* Заголовок в облачке */
+.title-cloud {
+    display: inline-block;
+    padding: 14px 26px;
+    margin-bottom: 16px;
+
+    font-family: "Monotype Corsiva", "Comic Sans MS", cursive;
     font-size: 26px;
-    margin-bottom: 12px;
+    color: #c9a26a; /* светло-коричневый */
+
+    background: #ffffff;
+    border-radius: 40px;
+
+    /* лёгкий эффект облака */
+    box-shadow:
+        12px 6px 0 #ffffff,
+        -12px 6px 0 #ffffff,
+        0 10px 0 #ffffff;
 }
+
 
 .subtitle {
     font-size: 16px;
@@ -78,3 +93,4 @@ body {
     opacity: 0;
     pointer-events: none;
 }
+
