@@ -118,8 +118,8 @@ body {
     font-size: 16px;
     color: #000;
     max-width: 45%;
-    text-align: center;   /* теперь переносы начинаются из центра колонки */
-    padding: 0 8px;       /* отступы слева и справа, чтобы текст не касался краёв */
+    text-align: center;   /* переносы начинаются из центра колонки */
+    padding: 0 8px;       /* отступы слева и справа */
 }
 
 /* Видео */
@@ -139,12 +139,10 @@ body {
 
     .row .text {
         max-width: 45%;
-        text-align: left;
+        /* text-align: left; <- убрали, теперь сохраняется center */
     }
 
     .row .image-wrapper {
         max-width: 50%;
     }
 }
-
-
