@@ -19,14 +19,14 @@ body {
 /* Заголовок */
 .title {
     font-family: "Monotype Corsiva", cursive;
-    font-size: 40px;
+    font-size: 60px;
     color: #c9a26a; /* светло-коричневый */
     margin-bottom: 12px;
 }
 
 /* Подзаголовок */
 .subtitle {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: normal;
     line-height: 1.4;
     margin-bottom: 16px;
@@ -120,6 +120,7 @@ body {
         max-width: 50%;
     }
 }
+
 
 
 
