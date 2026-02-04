@@ -1,53 +1,45 @@
-/* Сброс */
+/* Жесткий сброс */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Страница */
 body {
+    background-color: #f6f6f6;
     font-family: Georgia, "Times New Roman", serif;
-    background-color: #f8f8f8;
-    color: #222;
 }
 
-/* Контейнер */
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 16px;
-    text-align: center;
+/* Главный контейнер */
+.page {
+    max-width: 420px;          /* ЖЕСТКАЯ ширина для телефона */
+    margin: 0 auto;            /* Центр по горизонтали */
+    padding: 20px 16px;
+    text-align: center;        /* ВСЁ по центру */
 }
 
 /* Заголовок */
 .title {
     font-style: italic;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    font-size: 26px;
+    margin-bottom: 12px;
 }
 
 /* Подзаголовок */
 .subtitle {
-    font-size: 1.1rem;
-    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.4;
     margin-bottom: 16px;
-    color: #444;
+    font-weight: normal;
 }
 
-/* Изображение */
-.main-image {
+/* ФОТО — ЖЕСТКО ЗАФИКСИРОВАНО */
+.photo {
     width: 100%;
+    max-width: 360px;     /* ← ФИКСИРОВАННЫЙ МАКС РАЗМЕР */
     height: auto;
-    border-radius: 8px;
-}
-
-/* Чуть больше экран — чуть крупнее текст */
-@media (min-width: 768px) {
-    .title {
-        font-size: 2.2rem;
-    }
-
-    .subtitle {
-        font-size: 1.2rem;
-    }
+    display: block;
+    margin: 0 auto;       /* Центрирование картинки */
+    border-radius: 10px;
 }
