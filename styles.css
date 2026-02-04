@@ -19,7 +19,7 @@ body {
 /* Заголовок */
 .title {
     font-family: "Monotype Corsiva", cursive;
-    font-size: 26px;
+    font-size: 40px;
     color: #c9a26a; /* светло-коричневый */
     margin-bottom: 12px;
 }
@@ -114,3 +114,4 @@ body {
         margin-bottom: 10px;
     }
 }
+
