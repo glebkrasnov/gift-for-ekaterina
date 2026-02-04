@@ -122,13 +122,6 @@ body {
     padding: 0 8px;       /* отступы слева и справа, чтобы текст не касался краёв */
 }
 
-.row .text {
-    font-size: 16px;
-    color: #000;
-    max-width: 45%;
-    text-align: left;
-}
-
 /* Видео */
 .video-wrapper video {
     width: 100%;
@@ -153,4 +146,5 @@ body {
         max-width: 50%;
     }
 }
+
 
