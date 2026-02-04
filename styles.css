@@ -16,27 +16,15 @@ body {
     text-align: center;
 }
 
-/* Заголовок в облачке */
-.title-cloud {
-    display: inline-block;
-    padding: 14px 26px;
-    margin-bottom: 16px;
-
-    font-family: "Monotype Corsiva", "Comic Sans MS", cursive;
+/* Заголовок */
+.title {
+    font-family: "Monotype Corsiva", cursive;
     font-size: 26px;
     color: #c9a26a; /* светло-коричневый */
-
-    background: #ffffff;
-    border-radius: 40px;
-
-    /* лёгкий эффект облака */
-    box-shadow:
-        12px 6px 0 #ffffff,
-        -12px 6px 0 #ffffff,
-        0 10px 0 #ffffff;
+    margin-bottom: 12px;
 }
 
-
+/* Подзаголовок */
 .subtitle {
     font-size: 16px;
     font-weight: normal;
@@ -44,47 +32,41 @@ body {
     margin-bottom: 16px;
 }
 
-.image-wrapper {
-    position: relative;
-    max-width: 360px;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
 /* Фото */
 .photo {
-    width: 100%;
-    height: auto;
-    display: block;
     border-radius: 10px;
+    display: block;
+    max-width: 100%;
+    height: auto;
     transition: filter 0.6s ease;
 }
 
-/* Блюр как в Telegram */
-.photo.blurred {
-    filter: blur(30px);
+/* Блюр */
+.image-wrapper {
+    position: relative;
+    margin: 16px auto;
+    cursor: pointer;
 }
 
-/* Затемнение + текст */
+.photo.blurred {
+    filter: blur(25px);
+}
+
 .blur-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0,0,0,0.25);
     border-radius: 10px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
     padding: 12px;
-
     transition: opacity 0.4s ease;
 }
 
-/* После клика */
 .image-wrapper.revealed .photo {
     filter: blur(0);
 }
@@ -94,3 +76,41 @@ body {
     pointer-events: none;
 }
 
+/* Подписи */
+.caption {
+    margin: 10px 0 20px;
+    font-size: 14px;
+}
+
+.light-brown {
+    color: #c9a26a;
+}
+
+/* Ряд: текст слева, фото справа */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.row .text {
+    font-size: 16px;
+    color: #000;
+    max-width: 45%;
+    text-align: left;
+}
+
+/* Адаптация под мобильные экраны */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .row .text {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
