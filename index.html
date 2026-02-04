@@ -3,26 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Как это было...</title>
+<title>Как это было</title>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="wrapper">
-    <h1>Как это было...</h1>
+<div class="page">
 
-    <h2>
-        11 класс.<br>
-        Репетируем сценку к «Последнему Звонку»
-    </h2>
-
-    <div class="image-wrapper" onclick="revealPhoto()">
-        <img src="photo1.png" class="photo blurred" alt="Фото">
-        <div class="blur-overlay">
-            Нажми
-        </div>
+    <!-- Заголовок -->
+    <div class="cloud title-cloud">
+        Как это было...
     </div>
+
+    <!-- Подзаголовок -->
+    <div class="subtitle">
+        11 класс.<bg>
+            Репетируем сценку к «Последнему Звонку»
+    </div>
+
+    <!-- Фото 1 с блюром -->
+    <div class="image-wrapper" onclick="revealPhoto(this)">
+        <img src="photo1.png" class="photo blurred" alt="">
+        <div class="blur-overlay">Нажмите, чтобы открыть фото</div>
+    </div>
+
+    <!-- Текст облако -->
+    <div class="cloud">
+        Я сижу и даже представить не могу, что меня ждет впереди…
+    </div>
+
+    <!-- Текст слева, фото справа -->
+    <div class="row">
+        <div class="text">
+            Здесь мы впервые танцуем
+        </div>
+        <img src="photo2.png" class="photo small-photo" alt="">
+    </div>
+
+    <!-- Текст облако -->
+    <div class="cloud">
+        …а я впервые держу за руки своё будущее счастье…
+    </div>
+
+    <!-- Заголовок -->
+    <div class="section-title">
+        Выпускной! Здесь мы приблатённые 😎
+    </div>
+
+    <!-- Фото 3 -->
+    <img src="photo3.png" class="photo full-photo" alt="">
+
+    <!-- Текст облако -->
+    <div class="cloud">
+        Помню, как очень стеснялся подойти к тебе сфотографироваться 😅
+    </div>
+
+    <!-- Текст слева + фото справа -->
+    <div class="row">
+        <div class="text small">
+            Выпускной прошел. За ним ещё <span class="circle">9</span> месяцев,  
+            а ты всё ещё в моей голове
+        </div>
+        <img src="photo4.png" class="photo mini-photo" alt="">
+    </div>
+
+    <!-- Текст облако -->
+    <div class="cloud">
+        И вот, наконец, настал тот день, когда я обрёл своё счастье!
+    </div>
+
+    <!-- Фото 5 -->
+    <img src="photo5.png" class="photo full-photo" alt="">
+
+    <!-- Финальный блок -->
+    <div class="row end">
+        <div class="big-text">Отправил…</div>
+        <img src="photo6.png" class="photo tiny-photo" alt="">
+    </div>
+
 </div>
 
 <script src="script.js"></script>
