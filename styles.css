@@ -5,144 +5,76 @@
 }
 
 body {
-    background: #f7f6f3; /* временный светлый фон */
-    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
-/* ОСНОВНАЯ ШИРИНА */
-.page {
-    max-width: 1080px;
+.wrapper {
+    max-width: 420px;
     margin: 0 auto;
-    padding: 30px 50px; /* ← 50px края */
+    padding: 20px 16px;
+    text-align: center;
 }
 
-/* ОБЛАКА */
-.cloud {
-    font-family: "Monotype Corsiva", cursive;
-    font-size: 12px;
-    color: #c9a26a;
-    background: #fff;
-    border-radius: 40px;
-    padding: 14px 22px;
-    margin: 25px auto;
-    display: inline-block;
+.title {
+    font-style: italic;
+    font-size: 26px;
+    margin-bottom: 12px;
 }
 
-/* Заголовок */
-.title-cloud {
-    font-size: 22px;
-    text-transform: uppercase;
-}
-
-/* Подзаголовок */
 .subtitle {
-    font-size: 12px;
-    color: #000;
-    margin-top: 12px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+.image-wrapper {
+    position: relative;
+    max-width: 360px;
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 /* Фото */
 .photo {
-    border-radius: 14px;
+    width: 100%;
+    height: auto;
     display: block;
-    max-width: 100%;
-    margin: 25px auto;
-}
-
-/* Размеры */
-.full-photo { max-width: 981px; }
-.small-photo { max-width: 484px; }
-.mini-photo { max-width: 484px; }
-.tiny-photo { max-width: 396px; }
-
-/* БЛЮР */
-.image-wrapper {
-    position: relative;
-    max-width: 981px;
-    margin: 25px auto;
-    cursor: pointer;
-}
-
-.blurred {
-    filter: blur(18px);
+    border-radius: 10px;
     transition: filter 0.6s ease;
 }
 
+/* Блюр как в Telegram */
+.photo.blurred {
+    filter: blur(30px);
+}
+
+/* Затемнение + текст */
 .blur-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.25);
-    color: #fff;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 14px;
-    font-size: 14px;
+
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 12px;
+
     transition: opacity 0.4s ease;
 }
 
-.image-wrapper.revealed .blurred {
+/* После клика */
+.image-wrapper.revealed .photo {
     filter: blur(0);
 }
 
 .image-wrapper.revealed .blur-overlay {
     opacity: 0;
     pointer-events: none;
-}
-
-/* РЯД */
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    margin: 30px 0;
-}
-
-.text {
-    font-size: 12px;
-    color: #000;
-    max-width: 50%;
-}
-
-.text.small {
-    font-size: 10px;
-}
-
-/* ЦИФРА В КРУГЕ */
-.circle {
-    display: inline-block;
-    border: 1px solid #000;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 10px;
-}
-
-/* Заголовок секции */
-.section-title {
-    font-size: 12px;
-    color: #000;
-    margin-top: 30px;
-}
-
-/* Финал */
-.end .big-text {
-    font-size: 20px;
-    color: #000;
-}
-
-/* МОБИЛЬНАЯ АДАПТАЦИЯ */
-@media (max-width: 768px) {
-    .page {
-        padding: 20px;
-    }
-
-    .row {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .text {
-        max-width: 100%;
-    }
 }
