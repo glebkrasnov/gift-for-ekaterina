@@ -6,33 +6,9 @@ function revealPhoto(wrapper) {
 }
 
 /***********************
- * ПЛАВНОЕ ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ
- ***********************/
-document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(
-        ".image-wrapper, .caption, .row, .title, .subtitle, .final-love"
-    );
-
-    elements.forEach(el => el.classList.add("fade-in"));
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.15
-    });
-
-    elements.forEach(el => observer.observe(el));
-});
-
-/***********************
  * АВТОРИЗАЦИЯ + МЕНЮ
  ***********************/
-const PASSWORD = "1234"; // ← ПОМЕНЯЙ ПАРОЛЬ
+const PASSWORD = "1234";
 
 const authScreen    = document.getElementById("auth-screen");
 const welcomeScreen = document.getElementById("welcome-screen");
@@ -41,12 +17,8 @@ const toastScreen   = document.getElementById("toast-screen");
 const wrapper       = document.querySelector(".wrapper");
 const errorText     = document.getElementById("auth-error");
 
-// Лента скрыта по умолчанию через CSS, поэтому эту строку можно удалить
-// if (wrapper) { wrapper.style.display = "none"; }
-
 function checkPassword() {
     const input = document.getElementById("passwordInput").value;
-
     if (input !== PASSWORD) {
         errorText.textContent = "Неправильный пароль";
         return;
@@ -65,16 +37,12 @@ function checkPassword() {
 function openToast() {
     menuScreen.classList.add("hidden");
     toastScreen.classList.remove("hidden");
-
-    // Скролл наверх тоста
     toastScreen.scrollTop = 0;
 }
 
 function openStory() {
     menuScreen.classList.add("hidden");
     wrapper.style.display = "block";
-
-    // скролл в начало ленты
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
