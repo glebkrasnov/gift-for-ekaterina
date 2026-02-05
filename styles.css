@@ -265,6 +265,15 @@ body {
 
 
 /* Адаптация под мобильные экраны */
+/* Центрирование текста "Добро пожаловать, Екатерина!" на мобильных */
+@media (max-width: 768px) {
+    .welcome-text {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
 @media (max-width: 768px) {
     .row {
         flex-direction: row;
@@ -282,6 +291,7 @@ body {
         max-width: 50%;
     }
 }
+
 
 
 
