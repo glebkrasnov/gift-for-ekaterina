@@ -168,6 +168,101 @@ body {
     margin: 40px 0 20px;
     text-align: center;
 }
+:root {
+    --bg-image: none; /* сюда можно поставить url(...) */
+}
+
+body {
+    background: var(--bg-image), #f6f6f6;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Полноэкранные слои */
+.fullscreen-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Полупрозрачный контейнер */
+.glass-box {
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(201,162,106,0.6);
+    border-radius: 16px;
+    padding: 24px;
+    width: 90%;
+    max-width: 320px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+.glass-box button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #c9a26a;
+    background: #fff8e7;
+    cursor: pointer;
+}
+
+.glass-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: 1px solid #c9a26a;
+    font-size: 16px;
+}
+
+/* Тексты */
+.auth-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.auth-error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.welcome-text {
+    font-family: "Monotype Corsiva", cursive;
+    font-size: 36px;
+    color: #fff;
+    animation: fadeWelcome 2.5s ease forwards;
+}
+
+/* Тост */
+.toast-box {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.toast-text {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Анимация приветствия */
+@keyframes fadeWelcome {
+    0% { opacity: 0; transform: scale(0.95); }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; transform: scale(1.05); }
+}
+
 
 /* Адаптация под мобильные экраны */
 @media (max-width: 768px) {
@@ -187,6 +282,7 @@ body {
         max-width: 50%;
     }
 }
+
 
 
 
