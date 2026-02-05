@@ -254,7 +254,7 @@ body {
 /* Торжественная речь */
 .talk-header {
     font-family: "Monotype Corsiva", cursive;
-    font-size: 28px;
+    font-size: 35px;
     color: #c9a26a;
     text-align: center;
     margin-bottom: 12px;
@@ -340,6 +340,7 @@ body {
         max-width: 50%;
     }
 }
+
 
 
 
