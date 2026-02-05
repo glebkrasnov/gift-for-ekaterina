@@ -155,6 +155,11 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+.text.large {
+    font-size: 22px;
+    font-weight: bold;
+}
+
 
 /* Адаптация под мобильные экраны */
 @media (max-width: 768px) {
@@ -174,5 +179,6 @@ body {
         max-width: 50%;
     }
 }
+
 
 
