@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /***********************
  * АВТОРИЗАЦИЯ + МЕНЮ
  ***********************/
-const PASSWORD = "1234"; // ← ПОМЕНЯЙ ПАРОЛЬ
+const PASSWORD = "2"; // ← ПОМЕНЯЙ ПАРОЛЬ
 
 const authScreen    = document.getElementById("auth-screen");
 const welcomeScreen = document.getElementById("welcome-screen");
@@ -75,3 +75,4 @@ function backToMenu() {
     toastScreen.classList.add("hidden");
     menuScreen.classList.remove("hidden");
 }
+
