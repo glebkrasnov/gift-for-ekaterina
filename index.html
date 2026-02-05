@@ -10,7 +10,7 @@
 <body>
 
 <div class="wrapper">
-    <!-- Заголовок -->
+
     <h1 class="title">Как это было...</h1>
 
     <h2 class="subtitle">
@@ -18,9 +18,9 @@
         Репетируем сценку к «Последнему Звонку»
     </h2>
 
-    <!-- Фото 1 -->
+    <!-- photo1 -->
     <div class="image-wrapper" onclick="revealPhoto(this)">
-        <img src="img/photo1.png" class="photo blurred" alt="Фото 1">
+        <img src="img/photo1.png" class="photo blurred">
         <div class="blur-overlay">Нажми</div>
     </div>
 
@@ -28,11 +28,11 @@
         Я сижу и даже представить не могу, что меня ждет впереди...
     </div>
 
-    <!-- Ряд: текст слева + фото2 -->
+    <!-- photo2 -->
     <div class="row">
         <div class="text">Здесь мы впервые<br>танцуем</div>
         <div class="image-wrapper" onclick="revealPhoto(this)">
-            <img src="img/photo2.png" class="photo blurred" alt="Фото 2">
+            <img src="img/photo2.png" class="photo blurred">
             <div class="blur-overlay">Нажми</div>
         </div>
     </div>
@@ -45,8 +45,9 @@
         Выпускной!<br>Здесь мы приблатнённые 😎
     </div>
 
+    <!-- photo3 -->
     <div class="image-wrapper" onclick="revealPhoto(this)">
-        <img src="img/photo3.png" class="photo blurred" alt="Фото 3">
+        <img src="img/photo3.png" class="photo blurred">
         <div class="blur-overlay">Нажми</div>
     </div>
 
@@ -54,56 +55,169 @@
         Помню, как очень стеснялся подойти к тебе сфотографироваться 😅
     </div>
 
-    <!-- Ряд: текст слева + фото4 -->
+    <!-- photo4 -->
     <div class="row">
         <div class="text">
             Выпускной прошел.<br>
             За ним ещё <span class="highlight-number">9</span> месяцев, а ты всё ещё в моей голове...
         </div>
         <div class="image-wrapper" onclick="revealPhoto(this)">
-            <img src="img/photo4.png" class="photo blurred" alt="Фото 4">
+            <img src="img/photo4.png" class="photo blurred">
             <div class="blur-overlay">Нажми</div>
         </div>
     </div>
 
-    <!-- Подпись стиль 1 + фото5 -->
     <div class="caption style1">
         И вот, наконец, настал тот день, когда я обрёл своё счастье!
     </div>
+
+    <!-- photo5 -->
     <div class="image-wrapper" onclick="revealPhoto(this)">
-        <img src="img/photo5.png" class="photo blurred" alt="Фото 5">
+        <img src="img/photo5.png" class="photo blurred">
         <div class="blur-overlay">Нажми</div>
     </div>
 
-    <!-- Ряд: текст слева + фото6 -->
-    <div class="row">
-        <div class="text">Отправил...</div>
+    <!-- Отправил... + photo6 -->
+    <div class="row right-photo">
+        <div class="text big">Отправил...</div>
         <div class="image-wrapper" onclick="revealPhoto(this)">
-            <img src="img/photo6.png" class="photo blurred" alt="Фото 6">
+            <img src="img/photo6.png" class="photo blurred">
             <div class="blur-overlay">Нажми</div>
         </div>
     </div>
 
-    <!-- Фото7 + подпись справа -->
+    <!-- photo7 -->
     <div class="row">
         <div class="image-wrapper" onclick="revealPhoto(this)">
-            <img src="img/photo7.png" class="photo blurred" alt="Фото 7">
+            <img src="img/photo7.png" class="photo blurred">
             <div class="blur-overlay">Нажми</div>
         </div>
-        <div class="text">
-            Проходят часы, а ответа нет...
-        </div>
+        <div class="text">Проходят часы, а ответа нет...</div>
     </div>
 
-    <!-- Стиль1 текст + видео с блюром -->
-    <div class="caption style1">
-        Тем временем ты на паре...
-    </div>
+    <div class="caption style1">Тем временем ты на паре...</div>
+
+    <!-- video -->
     <div class="image-wrapper video-wrapper" onclick="revealPhoto(this)">
         <video class="photo blurred" controls>
             <source src="vid/мужик потеет.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
         </video>
+        <div class="blur-overlay">Нажми</div>
+    </div>
+
+    <!-- photo8 -->
+    <div class="row">
+        <div></div>
+        <div class="text">И тут приходит ответ...</div>
+        <div class="image-wrapper" onclick="revealPhoto(this)">
+            <img src="img/photo8.png" class="photo blurred">
+            <div class="blur-overlay">Нажми</div>
+        </div>
+    </div>
+
+    <!-- photo9 -->
+    <div class="image-wrapper" onclick="revealPhoto(this)">
+        <img src="img/photo9.png" class="photo blurred">
+        <div class="blur-overlay">Нажми</div>
+    </div>
+
+    <!-- photo10 -->
+    <div class="row">
+        <div class="text">нет блин, я прикалываюсь</div>
+        <div class="image-wrapper" onclick="revealPhoto(this)">
+            <img src="img/photo10.png" class="photo blurred">
+            <div class="blur-overlay">Нажми</div>
+        </div>
+    </div>
+
+    <div class="caption style1">
+        Ну ладно, надо ответить со всей «серьёзностью»
+    </div>
+
+    <!-- photo11 -->
+    <div class="image-wrapper" onclick="revealPhoto(this)">
+        <img src="img/photo11.png" class="photo blurred">
+        <div class="blur-overlay">Нажми</div>
+    </div>
+
+    <!-- photo12 -->
+    <div class="row">
+        <div class="text">серьёзный ответ</div>
+        <div class="image-wrapper" onclick="revealPhoto(this)">
+            <img src="img/photo12.png" class="photo blurred">
+            <div class="blur-overlay">Нажми</div>
+        </div>
+    </div>
+
+    <div class="caption style1">
+        Проходит время, опять молчит...
+    </div>
+
+    <!-- photo13 -->
+    <div class="image-wrapper" onclick="revealPhoto(this)">
+        <img src="img/photo13.png" class="photo blurred">
+        <div class="blur-overlay">Нажми</div>
+    </div>
+
+    <!-- photo14 -->
+    <div class="row">
+        <div class="text">Надо бы, что-то написать...</div>
+        <div class="image-wrapper" onclick="revealPhoto(this)">
+            <img src="img/photo14.png" class="photo blurred">
+            <div class="blur-overlay">Нажми</div>
+        </div>
+    </div>
+
+    <!-- photo15 -->
+    <div class="image-wrapper" onclick="revealPhoto(this)">
+        <img src="img/photo15.png" class="photo blurred">
+        <div class="blur-overlay">Нажми</div>
+    </div>
+
+    <!-- photo16 -->
+    <div class="image-wrapper" onclick="revealPhoto(this)">
+        <img src="img/photo16.png" class="photo blurred">
+        <div class="blur-overlay">Нажми</div>
+    </div>
+
+    <div class="caption style1">
+        Ну и с этого момента всё пошло, поехало...
+    </div>
+
+    <!-- photo17 -->
+    <div class="row">
+        <div class="text">Моральная поддержка</div>
+        <div class="image-wrapper" onclick="revealPhoto(this)">
+            <img src="img/photo17.png" class="photo blurred">
+            <div class="blur-overlay">Нажми</div>
+        </div>
+    </div>
+
+    <div class="caption style1">
+        Да, не всегда всё идёт по плану, но зато поднял настроение)
+    </div>
+
+    <!-- video -->
+    <div class="image-wrapper video-wrapper" onclick="revealPhoto(this)">
+        <video class="photo blurred" controls>
+            <source src="vid/моральная поддержка.mp4" type="video/mp4">
+        </video>
+        <div class="blur-overlay">Нажми</div>
+    </div>
+
+    <div class="caption style1">Наше первое фото</div>
+
+    <!-- photo18 -->
+    <div class="image-wrapper" onclick="revealPhoto(this)">
+        <img src="img/photo18.png" class="photo blurred">
+        <div class="blur-overlay">Нажми</div>
+    </div>
+
+    <div class="caption style1">Открытие новых вкусов</div>
+
+    <!-- photo19 -->
+    <div class="image-wrapper" onclick="revealPhoto(this)">
+        <img src="img/photo19.png" class="photo blurred">
         <div class="blur-overlay">Нажми</div>
     </div>
 
@@ -112,5 +226,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
