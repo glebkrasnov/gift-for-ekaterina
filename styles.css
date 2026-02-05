@@ -287,6 +287,12 @@ body {
     margin-bottom: 12px;
     text-align: center;
 }
+.center-text {
+    text-align: center;
+    font-size: 18px; /* тут можно менять размер шрифта */
+    margin: 12px 0;  /* отступ сверху и снизу */
+}
+
 
 /* Кнопка назад */
 .back-btn {
@@ -334,4 +340,5 @@ body {
         max-width: 50%;
     }
 }
+
 
