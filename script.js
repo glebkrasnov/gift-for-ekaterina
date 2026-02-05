@@ -6,9 +6,33 @@ function revealPhoto(wrapper) {
 }
 
 /***********************
+ * ПЛАВНОЕ ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ
+ ***********************/
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(
+        ".image-wrapper, .caption, .row, .title, .subtitle, .final-love"
+    );
+
+    elements.forEach(el => el.classList.add("fade-in"));
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    elements.forEach(el => observer.observe(el));
+});
+
+/***********************
  * АВТОРИЗАЦИЯ + МЕНЮ
  ***********************/
-const PASSWORD = "1234";
+const PASSWORD = "1234"; // ← ПОМЕНЯЙ ПАРОЛЬ
 
 const authScreen    = document.getElementById("auth-screen");
 const welcomeScreen = document.getElementById("welcome-screen");
@@ -19,6 +43,7 @@ const errorText     = document.getElementById("auth-error");
 
 function checkPassword() {
     const input = document.getElementById("passwordInput").value;
+
     if (input !== PASSWORD) {
         errorText.textContent = "Неправильный пароль";
         return;
