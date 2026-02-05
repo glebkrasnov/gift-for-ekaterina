@@ -134,6 +134,17 @@ body {
     width: 100%;
     border-radius: 10px;
 }
+/* Увеличенная надпись "Отправил..." */
+.text.big {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Прижать фото вправо внутри row */
+.row.right-photo {
+    justify-content: flex-end;
+}
+
 
 /* Адаптация под мобильные экраны */
 @media (max-width: 768px) {
@@ -153,3 +164,4 @@ body {
         max-width: 50%;
     }
 }
+
