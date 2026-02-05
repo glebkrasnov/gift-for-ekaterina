@@ -277,7 +277,7 @@ body {
 }
 
 .talk-container p {
-    text-indent: 2em; /* красная строка */
+    text-indent: 1em; /* красная строка */
     margin-bottom: 12px;
 }
 
@@ -334,3 +334,4 @@ body {
         max-width: 50%;
     }
 }
+
