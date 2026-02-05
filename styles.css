@@ -29,7 +29,7 @@ body {
 .menu-title {
     font-family: "Monotype Corsiva", cursive;
     font-size: 28px;
-    color: #000000;
+    color: #0000;
     margin-bottom: 16px;
     text-align: center;
 }
@@ -340,6 +340,7 @@ body {
         max-width: 50%;
     }
 }
+
 
 
 
