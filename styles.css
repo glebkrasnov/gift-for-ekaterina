@@ -277,7 +277,7 @@ body {
 }
 
 .talk-container p {
-    text-indent: 1em; /* красная строка */
+    text-indent: 0.5em; /* красная строка */
     margin-bottom: 12px;
 }
 
@@ -290,7 +290,7 @@ body {
 .center-text {
     text-align: center;
     font-size: 18px; /* тут можно менять размер шрифта */
-    margin: 12px 0;  /* отступ сверху и снизу */
+    margin: 14px 0;  /* отступ сверху и снизу */
 }
 
 
@@ -340,5 +340,6 @@ body {
         max-width: 50%;
     }
 }
+
 
 
