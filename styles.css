@@ -9,23 +9,23 @@ body {
     font-family: Georgia, "Times New Roman", serif;
 }
 
+/* Скрываем ленту по умолчанию */
 .wrapper {
     max-width: 420px;
     margin: 0 auto;
     padding: 20px 16px;
     text-align: center;
-}
-.wrapper {
     display: none; /* скрываем по умолчанию */
 }
 
-/* Заголовок */
+/* Заголовки */
 .title {
     font-family: "Monotype Corsiva", cursive;
     font-size: 50px;
     color: #c9a26a;
     margin-bottom: 12px;
 }
+
 .menu-title {
     font-family: "Monotype Corsiva", cursive;
     font-size: 28px;
@@ -34,8 +34,7 @@ body {
     text-align: center;
 }
 
-
-/* Подзаголовок */
+/* Подзаголовки */
 .subtitle {
     font-size: 18px;
     font-weight: normal;
@@ -43,7 +42,6 @@ body {
     margin-bottom: 16px;
 }
 
-/* Стиль 2 для подзаголовков (черный) */
 .style2 {
     color: #000;
 }
@@ -101,7 +99,7 @@ body {
     margin: 10px 0 20px;
 }
 
-/* Стиль 1 (светло-коричневый, почти печатный, рамка и фон) */
+/* Стиль 1 (светло-коричневый, рамка и фон) */
 .style1 {
     color: #c9a26a;
     font-family: Georgia, "Times New Roman", serif;
@@ -145,6 +143,7 @@ body {
     width: 100%;
     border-radius: 10px;
 }
+
 /* Увеличенная надпись "Отправил..." */
 .text.big {
     font-size: 26px;
@@ -155,6 +154,7 @@ body {
 .row.right-photo {
     justify-content: flex-end;
 }
+
 /* Анимация появления при скролле */
 .fade-in {
     opacity: 0;
@@ -166,10 +166,12 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
 .text.large {
     font-size: 22px;
     font-weight: bold;
 }
+
 .final-love {
     font-family: "Monotype Corsiva", cursive;
     font-size: 42px;
@@ -179,6 +181,7 @@ body {
     margin: 40px 0 20px;
     text-align: center;
 }
+
 :root {
     --bg-image: none; /* сюда можно поставить url(...) */
 }
@@ -257,13 +260,45 @@ body {
 
 /* Тост */
 .toast-box {
-    max-height: 70vh;
+    max-height: 80vh;
     overflow-y: auto;
 }
 
 .toast-text {
     font-size: 18px;
     line-height: 1.5;
+    text-align: center;
+}
+
+/* Новый стиль для речи */
+.talk-header {
+    font-family: "Monotype Corsiva", cursive;
+    font-size: 28px;
+    color: #c9a26a;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.talk-container {
+    background: rgba(255, 248, 231, 0.95);
+    border: 2px solid #c9a26a;
+    border-radius: 16px;
+    padding: 20px 24px;
+    max-width: 95%;
+    width: 95%;
+    max-height: 80vh;
+    overflow-y: auto;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #c9a26a;
+}
+
+.talk-subtitle {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 12px;
 }
 
 /* Анимация приветствия */
@@ -274,18 +309,14 @@ body {
     100% { opacity: 0; transform: scale(1.05); }
 }
 
-
 /* Адаптация под мобильные экраны */
-/* Центрирование текста "Добро пожаловать, Екатерина!" на мобильных */
 @media (max-width: 768px) {
     .welcome-text {
         text-align: center;
         margin: 0 auto;
         display: block;
     }
-}
 
-@media (max-width: 768px) {
     .row {
         flex-direction: row;
         flex-wrap: wrap;
@@ -302,11 +333,3 @@ body {
         max-width: 50%;
     }
 }
-
-
-
-
-
-
-
-
