@@ -120,29 +120,36 @@ body {
     justify-content: space-between;
     gap: 16px;
     margin-bottom: 20px;
-    flex-wrap: nowrap; /* ключ: блоки не переносятся! */
 }
 
 .row .text {
     font-size: 16px;
     color: #000;
-    max-width: 45%;  /* колонка не больше 45% */
-    text-align: left; /* текст слева внутри колонки */
-    padding: 0 8px;   /* внутренние отступы */
+    max-width: 45%;
+    text-align: left;
 }
 
-/* Мобильные экраны (если ширина слишком мала, можно поставить вертикально) */
-@media (max-width: 360px) {
+/* Видео */
+.video-wrapper video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Адаптация под мобильные экраны */
+@media (max-width: 768px) {
     .row {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start;
     }
 
-    .row .text,
+    .row .text {
+        max-width: 45%;
+        text-align: left;
+    }
+
     .row .image-wrapper {
-        max-width: 100%;
-        padding: 0 16px;
-        text-align: center;
+        max-width: 50%;
     }
 }
-
