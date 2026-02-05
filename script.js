@@ -34,16 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
  ***********************/
 const PASSWORD = "1234"; // ← ПОМЕНЯЙ ПАРОЛЬ
 
-const authScreen   = document.getElementById("auth-screen");
+const authScreen    = document.getElementById("auth-screen");
 const welcomeScreen = document.getElementById("welcome-screen");
-const menuScreen   = document.getElementById("menu-screen");
-const toastScreen  = document.getElementById("toast-screen");
-const wrapper      = document.querySelector(".wrapper");
-const errorText    = document.getElementById("auth-error");
+const menuScreen    = document.getElementById("menu-screen");
+const toastScreen   = document.getElementById("toast-screen");
+const wrapper       = document.querySelector(".wrapper");
+const errorText     = document.getElementById("auth-error");
 
-if (wrapper) {
-    wrapper.style.display = "none";
-}
+// Лента скрыта по умолчанию через CSS, поэтому эту строку можно удалить
+// if (wrapper) { wrapper.style.display = "none"; }
 
 function checkPassword() {
     const input = document.getElementById("passwordInput").value;
@@ -66,6 +65,9 @@ function checkPassword() {
 function openToast() {
     menuScreen.classList.add("hidden");
     toastScreen.classList.remove("hidden");
+
+    // Скролл наверх тоста
+    toastScreen.scrollTop = 0;
 }
 
 function openStory() {
