@@ -1,12 +1,16 @@
-// Убираем блюр при клике
+/***********************
+ * БЛЮР ПО КЛИКУ
+ ***********************/
 function revealPhoto(wrapper) {
     wrapper.classList.add("revealed");
 }
 
-/* Плавное появление при скролле */
+/***********************
+ * ПЛАВНОЕ ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ
+ ***********************/
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(
-        ".image-wrapper, .caption, .row, .title, .subtitle"
+        ".image-wrapper, .caption, .row, .title, .subtitle, .final-love"
     );
 
     elements.forEach(el => el.classList.add("fade-in"));
@@ -24,3 +28,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
     elements.forEach(el => observer.observe(el));
 });
+
+/***********************
+ * АВТОРИЗАЦИЯ + МЕНЮ
+ ***********************/
+const PASSWORD = "1234"; // ← ПОМЕНЯЙ ПАРОЛЬ
+
+const authScreen   = document.getElementById("auth-screen");
+const welcomeScreen = document.getElementById("welcome-screen");
+const menuScreen   = document.getElementById("menu-screen");
+const toastScreen  = document.getElementById("toast-screen");
+const wrapper      = document.querySelector(".wrapper");
+const errorText    = document.getElementById("auth-error");
+
+if (wrapper) {
+    wrapper.style.display = "none";
+}
+
+function checkPassword() {
+    const input = document.getElementById("passwordInput").value;
+
+    if (input !== PASSWORD) {
+        errorText.textContent = "Неправильный пароль";
+        return;
+    }
+
+    errorText.textContent = "";
+    authScreen.classList.add("hidden");
+    welcomeScreen.classList.remove("hidden");
+
+    setTimeout(() => {
+        welcomeScreen.classList.add("hidden");
+        menuScreen.classList.remove("hidden");
+    }, 2500);
+}
+
+function openToast() {
+    menuScreen.classList.add("hidden");
+    toastScreen.classList.remove("hidden");
+}
+
+function openStory() {
+    menuScreen.classList.add("hidden");
+    wrapper.style.display = "block";
+
+    // скролл в начало ленты
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function backToMenu() {
+    toastScreen.classList.add("hidden");
+    menuScreen.classList.remove("hidden");
+}
