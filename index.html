@@ -20,32 +20,34 @@
 
 <!-- ПРИВЕТСТВИЕ -->
 <div id="welcome-screen" class="fullscreen-overlay hidden">
-    <div class="welcome-text">
-        Добро пожаловать, Екатерина!
-    </div>
+    <div class="welcome-text" style="text-align: center;">
+    Добро пожаловать, Екатерина!
+</div>
 </div>
 
 <!-- МЕНЮ -->
 <div id="menu-screen" class="fullscreen-overlay hidden">
-    <div class="glass-box">
-        <h2 class="menu-title">2 года вместе!</h2>
-        <button onclick="openToast()">Тост</button>
-        <button onclick="openStory()">Как это было...</button>
-    </div>
+  <div class="glass-box">
+    <h2 class="menu-title">2 года вместе!</h2>
+    <button onclick="openToast()">Тост</button>
+    <button onclick="openStory()">Как это было...</button>
+  </div>
 </div>
 
-<!-- ТОСТ / ТОРЖЕСТВЕННАЯ РЕЧЬ -->
+<!-- Торжественная речь -->
 <div id="toast-screen" class="fullscreen-overlay hidden">
-    <div class="talk-wrapper">
+    <div class="toast-box">
         <div class="talk-header">🌹 Торжественная речь</div>
         <div class="talk-container">
             <div class="talk-subtitle">Ровно два года</div>
 
             <p>Ровно два года, как одно сообщение изменило мою жизнь.</p>
             <p>Ровно два года, как я до сих пор нахожусь в шоке.</p>
-            <p>Ровно два года прошло с того момента,<br>как я обрел своё счастье.</p>
+            <p>Ровно два года прошло с того момента,<br>
+            как я обрел своё счастье.</p>
             <p>Ровно два года, как я понял, что рядом со мной — тот человек, с которым мне хочется быть.</p>
-            <p>Ровно два года, как каждое утро стало начинаться с улыбки, а вечер — с мыслей о тебе.<br>(Порой я даже ночами не могу уснуть)</p>
+            <p>Ровно два года, как каждое утро стало начинаться с улыбки, а вечер — с мыслей о тебе.<br>
+            (Порой я даже ночами не могу уснуть)</p>
             <p>Ровно два года, как мы вместе учились слушать, слышать, понимать и прощать.</p>
             <p>Ровно два года, как я нашёл свой смысл в твоих глазах.</p>
             <p>Ровно два года, как моё сердце знает, кому оно принадлежит.</p>
@@ -62,21 +64,20 @@
             <p>09.04.2026г.</p>
             <p>(Ровно два года, как ты заставляешь меня думать, что сказать, спросить аххахахах)</p>
 
-            <button onclick="backToMenu()">Назад</button>
+            <button onclick="backToMenu()" class="back-btn">Назад</button>
         </div>
     </div>
 </div>
 
 <!-- ЛЕНТА -->
 <div class="wrapper">
-    <!-- Ваша лента фото/видео -->
     <h1 class="title">Как это было...</h1>
+
     <h2 class="subtitle">
         11 класс.<br>
         Репетируем сценку к «Последнему Звонку»
     </h2>
-    <!-- добавляйте фото/видео здесь -->
-    <!-- photo1 -->
+<!-- photo1 -->
     <div class="image-wrapper" onclick="revealPhoto(this)">
         <img src="img/photo1.png" class="photo blurred">
         <div class="blur-overlay">Нажми</div>
@@ -351,10 +352,7 @@
 <div class="final-love">
     Я люблю тебя,<br>Екатерина!
 </div>
-
-
-    <!-- Здесь дальше добавляй видео и подписи, как у тебя в оригинале -->
-
+<!-- ВСЯ ЛЕНТА БЕЗ ИЗМЕНЕНИЙ — сюда вставляется твой существующий HTML контент -->
 </div>
 
 <script src="script.js"></script>
