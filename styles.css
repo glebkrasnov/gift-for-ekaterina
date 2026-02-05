@@ -159,7 +159,15 @@ body {
     font-size: 22px;
     font-weight: bold;
 }
-
+.final-love {
+    font-family: "Monotype Corsiva", cursive;
+    font-size: 42px;
+    color: #c9a26a;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 40px 0 20px;
+    text-align: center;
+}
 
 /* Адаптация под мобильные экраны */
 @media (max-width: 768px) {
@@ -179,6 +187,7 @@ body {
         max-width: 50%;
     }
 }
+
 
 
 
