@@ -4,11 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Как это было...</title>
-
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- АВТОРИЗАЦИЯ -->
+<div id="auth-screen" class="fullscreen-overlay">
+    <div class="glass-box">
+        <div class="auth-title">Введи пароль</div>
+        <input type="password" id="passwordInput" placeholder="Пароль">
+        <button onclick="checkPassword()">Войти</button>
+        <div id="auth-error" class="auth-error"></div>
+    </div>
+</div>
+
+<!-- ПРИВЕТСТВИЕ -->
+<div id="welcome-screen" class="fullscreen-overlay hidden">
+    <div class="welcome-text">Добро пожаловать, Екатерина!</div>
+</div>
+
+<!-- МЕНЮ -->
+<div id="menu-screen" class="fullscreen-overlay hidden">
+    <div class="glass-box">
+        <button onclick="openToast()">Тост</button>
+        <button onclick="openStory()">Как это было...</button>
+    </div>
+</div>
+
+<!-- ТОСТ -->
+<div id="toast-screen" class="fullscreen-overlay hidden">
+    <div class="glass-box toast-box">
+        <div class="toast-text">
+            Здесь будет твоя речь...
+        </div>
+        <button onclick="backToMenu()">Назад</button>
+    </div>
+</div>
+
+<!-- ЛЕНТА -->
 <div class="wrapper">
 
     <h1 class="title">Как это было...</h1>
@@ -97,7 +130,7 @@
 
     <div class="caption style1">Тем временем ты на паре...</div>
 
-    <!-- video -->
+    <!-- video1 -->
     <div class="image-wrapper video-wrapper" onclick="revealPhoto(this)">
         <video class="photo blurred" controls>
             <source src="vid/мужик потеет.mp4" type="video/mp4">
@@ -107,13 +140,12 @@
 
     <!-- photo8 -->
     <div class="row">
-    <div class="text">И тут приходит ответ...</div>
-    <div class="image-wrapper" onclick="revealPhoto(this)">
-        <img src="img/photo8.png" class="photo blurred">
-        <div class="blur-overlay">Нажми</div>
+        <div class="text">И тут приходит ответ...</div>
+        <div class="image-wrapper" onclick="revealPhoto(this)">
+            <img src="img/photo8.png" class="photo blurred">
+            <div class="blur-overlay">Нажми</div>
+        </div>
     </div>
-</div>
-
 
     <!-- photo9 -->
     <div class="image-wrapper" onclick="revealPhoto(this)">
@@ -123,13 +155,12 @@
 
     <!-- photo10 -->
     <div class="row">
-    <div class="image-wrapper" onclick="revealPhoto(this)">
-        <img src="img/photo10.png" class="photo blurred">
-        <div class="blur-overlay">Нажми</div>
+        <div class="image-wrapper" onclick="revealPhoto(this)">
+            <img src="img/photo10.png" class="photo blurred">
+            <div class="blur-overlay">Нажми</div>
+        </div>
+        <div class="text">нет блин, я прикалываюсь</div>
     </div>
-    <div class="text">нет блин, я прикалываюсь</div>
-</div>
-
 
     <div class="caption style1">
         Ну ладно, надо ответить со всей «серьёзностью»
@@ -198,7 +229,7 @@
         Да, не всегда всё идёт по плану, но зато поднял настроение)
     </div>
 
-    <!-- video -->
+    <!-- video2 -->
     <div class="image-wrapper video-wrapper" onclick="revealPhoto(this)">
         <video class="photo blurred" controls>
             <source src="vid/моральная поддержка.mp4" type="video/mp4">
@@ -297,16 +328,10 @@
 </div>
 
 
+    <!-- Здесь дальше добавляй видео и подписи, как у тебя в оригинале -->
 
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
