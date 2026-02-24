@@ -11,6 +11,8 @@ body {
 
 /* Скрываем ленту по умолчанию */
 .wrapper {
+    background: #ffffff;
+    min-height: 100vh;
     max-width: 420px;
     margin: 0 auto;
     padding: 20px 16px;
@@ -347,6 +349,7 @@ body {
         max-width: 50%;
     }
 }
+
 
 
 
