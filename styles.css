@@ -177,7 +177,7 @@ body {
 }
 
 :root {
-    --bg-image: img/photo.jpg;
+    --bg-image: none;
 }
 
 body {
@@ -347,6 +347,7 @@ body {
         max-width: 50%;
     }
 }
+
 
 
 
