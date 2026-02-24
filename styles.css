@@ -181,7 +181,7 @@ body {
 }
 
 body {
-    background: url("img/photo.jpg") no-repeat center center fixed;
+    background: var(--bg-image), #f6f6f6;
     background-size: cover;
     background-position: center;
 }
@@ -347,6 +347,7 @@ body {
         max-width: 50%;
     }
 }
+
 
 
 
