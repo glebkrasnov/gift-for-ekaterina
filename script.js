@@ -48,6 +48,9 @@ function checkPassword() {
         errorText.textContent = "Неправильный пароль";
         return;
     }
+    function revealVideo(el) {
+    el.classList.add('revealed');
+}
 
     errorText.textContent = "";
     authScreen.classList.add("hidden");
