@@ -1,8 +1,15 @@
 /***********************
- * БЛЮР ПО КЛИКУ
+ * БЛЮР ФОТО ПО КЛИКУ
  ***********************/
 function revealPhoto(wrapper) {
     wrapper.classList.add("revealed");
+}
+
+/***********************
+ * БЛЮР ВИДЕО ПО КЛИКУ
+ ***********************/
+function revealVideo(el) {
+    el.classList.add("revealed");
 }
 
 /***********************
@@ -48,9 +55,6 @@ function checkPassword() {
         errorText.textContent = "Неправильный пароль";
         return;
     }
-    function revealVideo(el) {
-    el.classList.add('revealed');
-}
 
     errorText.textContent = "";
     authScreen.classList.add("hidden");
@@ -77,5 +81,5 @@ function openStory() {
 function backToMenu() {
     toastScreen.classList.add("hidden");
     menuScreen.classList.remove("hidden");
+    wrapper.style.display = "none";
 }
-
